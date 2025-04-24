@@ -61,7 +61,7 @@ customer-order-service/
 ## Installation
 ```bash
 # Clone repository
-git clone https://github.com/Muasa-harman/customer-order-api
+git clone https://github.com/Muasa-harman/customer-order-services.git
 cd customer-order-service
 
 python -m venv .venv
