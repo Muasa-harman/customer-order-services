@@ -1,28 +1,21 @@
-
-
-# FROM --platform=linux/amd64 quay.io/keycloak/keycloak:24.0.3
-
 FROM --platform=linux/amd64 quay.io/keycloak/keycloak:24.0.3
 
 ENV KEYCLOAK_ADMIN=${KEYCLOAK_ADMIN}
 ENV KEYCLOAK_ADMIN_PASSWORD=${KEYCLOAK_ADMIN_PASSWORD}
 ENV PORT=10000
 ENV KC_DB=postgres
-# ENV KC_DB_URL=jdbc:postgresql://donfiles_online:QAnaEutatJb6hfUivSMrP2P4lbbZnjVk@dpg-d0369b9r0fns73am5te0-a/customer_order_service
 ENV KC_DB_URL=jdbc:postgresql://dpg-d0369b9r0fns73am5te0-a.frankfurt-postgres.render.com:5432/customer_order_service
 ENV KC_DB_USERNAME=donfiles_online
 ENV KC_DB_PASSWORD=${KC_DB_PASSWORD} 
 ENV KC_HOSTNAME_STRICT=false
 
 
-
 ENV QUARKUS_LOG_HANDLER_FILE_ENABLE=true
 ENV QUARKUS_LOG_FILE_ENABLE=true
-# ENV QUARKUS_LOG_FILE_PATH=/opt/keycloak/data/log/keycloak.log
 ENV QUARKUS_LOG_FILE_PATH=/var/log/keycloak.log
 ENV QUARKUS_LOG_FILE_ROTATION_MAX_FILE_SIZE=10M
 
-# Build optimized for production
+
 RUN /opt/keycloak/bin/kc.sh build
 
 # Start with database configuration

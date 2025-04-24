@@ -145,15 +145,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'customer_order_api.wsgi.application'
 
-# Database
-# import dj_database_url
-# import os
 
-# DATABASES = {
-#     'default': dj_database_url.config(
-#         default=os.getenv('DATABASE_URL') 
-#     )
-# }
 
 DATABASES = {
     'default': {
@@ -171,8 +163,6 @@ DATABASES = {
 DATABASES['default']['CONN_MAX_AGE'] = 0
 DATABASES['default']['TEST']['DISABLE_SERVER_SIDE_CURSORS'] = True
 
-# Password validation
-# https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
 
 AUTH_PASSWORD_VALIDATORS = [
     {

@@ -7,7 +7,7 @@ on:
   pull_request:
 
 env:
-  IMAGE_NAME: ghcr.io/${{ github.repository }}
+  IMAGE_NAME: ghcr.io/${{ '' }}
   HELM_RELEASE_NAME: my-service
   HELM_CHART_PATH: ./helm/my-service
 
@@ -45,8 +45,8 @@ jobs:
         uses: docker/login-action@v2
         with:
           registry: ghcr.io
-          username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}
+          username: ${{''}}
+          password: ${{'' }}
 
       - name: Build and push Docker image
         run: |
@@ -64,7 +64,7 @@ jobs:
       - name: Set up kubeconfig
         run: |
           mkdir -p ~/.kube
-          echo "${{ secrets.KUBECONFIG }}" > ~/.kube/config
+          echo "${{ ''}}" > ~/.kube/config
           chmod 600 ~/.kube/config
 
       - name: Set up Helm
