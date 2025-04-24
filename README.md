@@ -1,6 +1,6 @@
 # customer-order-services
 
-[![CI/CD](https://github.com/Muasa-harman/customer-order-service/actions/workflows/ci-cd.yml/badge.svg)](https://github.com/Muasa-harman/customer-order-service/actions)
+[![CI/CD](https://github.com/Muasa-harman/customer-order-services/actions/workflows/ci-cd.yml/badge.svg)](https://github.com/Muasa-harman/customer-order-services.git)
 
 [![GraphQL](https://img.shields.io/badge/API-GraphQL-e10098.svg)](https://graphql.org/)
 
