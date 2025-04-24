@@ -1,0 +1,61 @@
+customer-order-service/
+├── api/                          
+│   ├── customers/                
+│   │   ├── models.py            
+│   │   ├── schema.py             
+│   ├── orders/                   
+│   │   ├── models.py             
+│   │   ├── schema.py             
+│   ├── config/      
+│   │   ├── settings/
+│   │   │   ├── base.py
+│   │   │   ├── production.py    
+│   │   │   └── local.py
+│   ├── schema.py        
+├── deployments/
+│   ├── helm/   
+│   │   ├── Chart.yaml
+│   │   ├── values.yaml
+│   │   └── templates/
+│   │       ├── deployment.yaml
+│   │       ├── service.yaml
+│   │       └── ingress.yaml
+│   ├── ansible/         
+│   │   ├── playbooks/
+│   │   │   ├── deploy.yml       
+│   │   │   └── postgresql.yml
+│   │   └── roles/
+│   │       └── django-app/
+├── tests/        
+│   ├── unit/
+│   │   ├── test_models.py
+│   │   └── test_schemas.py
+│   └── integration/
+│       └── test_auth.py
+├── Dockerfile             
+├── docker-compose.yml           
+├── .github/workflows/            
+│   └── ci-cd.yml
+├── .env.sample                
+└── README.md                   
+customer-order-service/
+├── api/
+│   ├── users/                    
+│   │   ├── models.py             
+│   │   ├── schema.py            
+│   │   ├── middleware.py        
+│   │   ├── backends.py         
+│   │   └── admin.py           
+│   ├── customers/
+│   ├── orders/
+│   ├── config/
+│   └── schema.py                
+├── deployments/
+│   ├── helm/
+│   │   └── templates/
+│   │       └── configmap.yaml    
+├── tests/
+│   ├── integration/
+│   │   └── test_auth.py        
+└── .env.sample                  
+
